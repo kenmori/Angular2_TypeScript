@@ -21,14 +21,33 @@ var HelloWorld = (function () {
     ], HelloWorld);
     return HelloWorld;
 })();
+var HelloH2 = (function () {
+    function HelloH2() {
+    }
+    HelloH2 = __decorate([
+        angular2_1.Component({
+            selector: "hello-h2",
+            template: "\n  <hello-world></hello-world>\n  <h2>fafa</h2>\n  ",
+            directives: [angular2_1.CORE_DIRECTIVES, HelloWorld]
+        }), 
+        __metadata('design:paramtypes', [])
+    ], HelloH2);
+    return HelloH2;
+})();
+//ng-repeat
+//ng-click
+//ng-filter
+//childComponent
 var MyApp = (function () {
     function MyApp() {
+        this.title = "watashi";
+        this.addtext = "faa";
     }
     MyApp = __decorate([
         angular2_1.Component({
             selector: "my-app",
-            template: "\n  <hello-world></hello-world>\n  ",
-            directives: [angular2_1.CORE_DIRECTIVES, HelloWorld]
+            template: "\n  <hello-h2></hello-h2>\n  <div>{{addtext}}</div>\n  <p>{{title}}</p>\n  <input type=\"text\" [ng-model]=\"addtext\" (ng-model-change)=\"addtext=$event\" />\n  ",
+            directives: [angular2_1.CORE_DIRECTIVES, angular2_1.FORM_DIRECTIVES, HelloH2]
         }), 
         __metadata('design:paramtypes', [])
     ], MyApp);
