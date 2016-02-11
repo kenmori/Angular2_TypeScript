@@ -8,7 +8,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-require("rxjs/Rx");
+require('rxjs/Rx');
+var browser_1 = require("angular2/platform/browser");
 var core_1 = require("angular2/core");
 var common_1 = require("angular2/common");
 var HelloWorld = (function () {
@@ -17,22 +18,23 @@ var HelloWorld = (function () {
     HelloWorld = __decorate([
         core_1.Component({
             selector: "hello-world",
-            template: "\n    <h1>hello world</h1>\n  "
+            template: "\n    <h1>Hello World!</h1>\n  "
         }), 
         __metadata('design:paramtypes', [])
     ], HelloWorld);
     return HelloWorld;
-})();
+}());
 var MyApp = (function () {
     function MyApp() {
     }
     MyApp = __decorate([
         core_1.Component({
-            selector: "",
-            template: "\n  <hello-world></hello-world>\n  ",
+            selector: "my-app",
+            template: "\n    <hello-world></hello-world>\n  ",
             directives: [common_1.CORE_DIRECTIVES, HelloWorld]
         }), 
         __metadata('design:paramtypes', [])
     ], MyApp);
     return MyApp;
-})();
+}());
+browser_1.bootstrap(MyApp);
