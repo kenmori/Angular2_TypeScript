@@ -9,17 +9,30 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var angular2_1 = require('angular2/angular2');
-var AppComponent = (function () {
-    function AppComponent() {
+var HelloWorld = (function () {
+    function HelloWorld() {
     }
-    AppComponent = __decorate([
+    HelloWorld = __decorate([
         angular2_1.Component({
-            selector: 'my-app',
-            template: '<h1>My First Angular 2 App</h1>'
+            selector: "hello-world",
+            template: "<h1>My First Angular 2 App</h1>",
         }), 
         __metadata('design:paramtypes', [])
-    ], AppComponent);
-    return AppComponent;
+    ], HelloWorld);
+    return HelloWorld;
 })();
-angular2_1.bootstrap(AppComponent);
+var MyApp = (function () {
+    function MyApp() {
+    }
+    MyApp = __decorate([
+        angular2_1.Component({
+            selector: "my-app",
+            template: "\n  <hello-world></hello-world>\n  ",
+            directives: [angular2_1.CORE_DIRECTIVES, HelloWorld]
+        }), 
+        __metadata('design:paramtypes', [])
+    ], MyApp);
+    return MyApp;
+})();
+angular2_1.bootstrap(MyApp);
 //# sourceMappingURL=app.js.map
