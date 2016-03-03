@@ -40,13 +40,20 @@ var HelloH2 = (function () {
 //childComponent
 var MyApp = (function () {
     function MyApp() {
+        this.count = 0;
         this.title = "watashi";
         this.addtext = "faa";
     }
+    MyApp.prototype.clicked = function (event) {
+        this.count += 1;
+    };
+    MyApp.prototype.clearCount = function () {
+        this.count = 0;
+    };
     MyApp = __decorate([
         angular2_1.Component({
             selector: "my-app",
-            template: "\n  <hello-h2></hello-h2>\n  <div>{{addtext}}</div>\n  <p>{{title}}</p>\n  <input type=\"text\" [ng-model]=\"addtext\" (ng-model-change)=\"addtext=$event\" />\n  ",
+            template: "\n  <hello-h2></hello-h2>\n  <div>{{addtext}}</div>\n  <p>{{title}}</p>\n  <input type=\"text\" [ng-model]=\"addtext\" (ng-model-change)=\"addtext=$event\" />\n  <button (click)=\"clicked($event)\">\u30DC\u30BF\u30F3</button>\n  <button (click)=\"clearCount($event)\">\u30AF\u30EA\u30A2</button>\n  <div (ng-model)=\"count\">{{count}}</div>\n  ",
             directives: [angular2_1.CORE_DIRECTIVES, angular2_1.FORM_DIRECTIVES, HelloH2]
         }), 
         __metadata('design:paramtypes', [])

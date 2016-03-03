@@ -26,11 +26,21 @@ class HelloH2 {
   <div>{{addtext}}</div>
   <p>{{title}}</p>
   <input type="text" [ng-model]="addtext" (ng-model-change)="addtext=$event" />
+  <button (click)="clicked($event)">ボタン</button>
+  <button (click)="clearCount($event)">クリア</button>
+  <div (ng-model)="count">{{count}}</div>
   `,
   directives: [CORE_DIRECTIVES, FORM_DIRECTIVES, HelloH2]
 })
 class MyApp{
+  public count: number = 0;
   public title: string = "watashi";
   public addtext: string = "faa";
+  public clicked(event){
+      this.count += 1;
+  }
+  public clearCount(){
+    this.count = 0;
+  }
 }
 bootstrap(MyApp);
