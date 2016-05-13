@@ -11,17 +11,32 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 require("core-js");
 require("rxjs/Rx");
 require("zone.js/dist/zone");
+var platform_browser_dynamic_1 = require("@angular/platform-browser-dynamic");
 var core_1 = require("@angular/core");
+var HelloWorldComponent = (function () {
+    function HelloWorldComponent() {
+    }
+    HelloWorldComponent = __decorate([
+        core_1.Component({
+            selector: "hello-world",
+            template: "\n  <h1>Hello World</h1>\n  ",
+            directives: []
+        }), 
+        __metadata('design:paramtypes', [])
+    ], HelloWorldComponent);
+    return HelloWorldComponent;
+}());
 var MyAppComponent = (function () {
     function MyAppComponent() {
     }
     MyAppComponent = __decorate([
         core_1.Component({
             selector: "my-app",
-            template: "\n  <hello-world></hello-world>\n  ",
-            directives: []
+            template: "\n    <hello-world></hello-world>\n  ",
+            directives: [HelloWorldComponent]
         }), 
         __metadata('design:paramtypes', [])
     ], MyAppComponent);
     return MyAppComponent;
-})();
+}());
+platform_browser_dynamic_1.bootstrap(MyAppComponent);

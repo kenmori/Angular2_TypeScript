@@ -6,12 +6,23 @@ import {bootstrap} from "@angular/platform-browser-dynamic";
 import {Component} from "@angular/core";
 
 @Component({
-  selector: `my-app`,
+  selector: `hello-world`,
   template: `
-  <hello-world></hello-world>
+  <h1>Hello World</h1>
   `,
   directives: []
 })
-class MyAppComponent {
-
+class HelloWorldComponent {
 }
+
+@Component({
+  selector: `my-app`,
+  template: `
+    <hello-world></hello-world>
+  `,
+  directives: [HelloWorldComponent]
+})
+class MyAppComponent {
+}
+
+bootstrap(MyAppComponent);
