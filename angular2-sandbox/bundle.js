@@ -19,9 +19,8 @@ var HelloWorldComponent = (function () {
     }
     HelloWorldComponent = __decorate([
         core_1.Component({
-            selector: "hello-world",
-            template: "\n  <h1>Hello World</h1>\n  ",
-            directives: []
+            selector: 'hello-world',
+            template: "<h1>hello-world!</h1>"
         }), 
         __metadata('design:paramtypes', [])
     ], HelloWorldComponent);
@@ -32,8 +31,8 @@ var MyAppComponent = (function () {
     }
     MyAppComponent = __decorate([
         core_1.Component({
-            selector: "my-app",
-            template: "\n    <hello-world></hello-world>\n  ",
+            selector: 'my-app',
+            template: "<hello-world></hello-world>",
             directives: [HelloWorldComponent]
         }), 
         __metadata('design:paramtypes', [])

@@ -1,0 +1,14 @@
+{
+  "name": "an2_ts_playgrond",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "tsc" : "tsc -p .",
+    "browserify" : "browserify ./index.js -o ./bundle.js",
+    "build" : "npm run tsc && npm run browserify" 
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

@@ -6,16 +6,16 @@
 2 info using npm@3.9.5
 3 info using node@v6.2.2
 4 verbose run-script [ 'prebuild', 'build', 'postbuild' ]
-5 info lifecycle @~prebuild: @
-6 silly lifecycle @~prebuild: no script for prebuild, continuing
-7 info lifecycle @~build: @
-8 verbose lifecycle @~build: unsafe-perm in lifecycle true
-9 verbose lifecycle @~build: PATH: /usr/local/lib/node_modules/npm/bin/node-gyp-bin:/Users/No51/Desktop/Git/angu2_type/node_modules/.bin:/usr/local/Cellar/node/6.2.2/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin
-10 verbose lifecycle @~build: CWD: /Users/No51/Desktop/Git/angu2_type
-11 silly lifecycle @~build: Args: [ '-c', 'npm run tsc && npm run browserify' ]
-12 silly lifecycle @~build: Returned: code: 1  signal: null
-13 info lifecycle @~build: Failed to exec build script
-14 verbose stack Error: @ build: `npm run tsc && npm run browserify`
+5 info lifecycle angular2-sandbox@1.0.0~prebuild: angular2-sandbox@1.0.0
+6 silly lifecycle angular2-sandbox@1.0.0~prebuild: no script for prebuild, continuing
+7 info lifecycle angular2-sandbox@1.0.0~build: angular2-sandbox@1.0.0
+8 verbose lifecycle angular2-sandbox@1.0.0~build: unsafe-perm in lifecycle true
+9 verbose lifecycle angular2-sandbox@1.0.0~build: PATH: /usr/local/lib/node_modules/npm/bin/node-gyp-bin:/Users/No51/Desktop/Git/angu2_type/angular2-sandbox/node_modules/.bin:/usr/local/Cellar/node/6.2.2/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin
+10 verbose lifecycle angular2-sandbox@1.0.0~build: CWD: /Users/No51/Desktop/Git/angu2_type/angular2-sandbox
+11 silly lifecycle angular2-sandbox@1.0.0~build: Args: [ '-c', 'npm run tsc && npm run browserify' ]
+12 silly lifecycle angular2-sandbox@1.0.0~build: Returned: code: 1  signal: null
+13 info lifecycle angular2-sandbox@1.0.0~build: Failed to exec build script
+14 verbose stack Error: angular2-sandbox@1.0.0 build: `npm run tsc && npm run browserify`
 14 verbose stack Exit status 1
 14 verbose stack     at EventEmitter.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/lifecycle.js:245:16)
 14 verbose stack     at emitTwo (events.js:106:13)
@@ -25,24 +25,24 @@
 14 verbose stack     at ChildProcess.emit (events.js:191:7)
 14 verbose stack     at maybeClose (internal/child_process.js:852:16)
 14 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:215:5)
-15 verbose pkgid @
-16 verbose cwd /Users/No51/Desktop/Git/angu2_type
+15 verbose pkgid angular2-sandbox@1.0.0
+16 verbose cwd /Users/No51/Desktop/Git/angu2_type/angular2-sandbox
 17 error Darwin 14.3.0
 18 error argv "/usr/local/Cellar/node/6.2.2/bin/node" "/usr/local/bin/npm" "run" "build"
 19 error node v6.2.2
 20 error npm  v3.9.5
 21 error code ELIFECYCLE
-22 error @ build: `npm run tsc && npm run browserify`
+22 error angular2-sandbox@1.0.0 build: `npm run tsc && npm run browserify`
 22 error Exit status 1
-23 error Failed at the @ build script 'npm run tsc && npm run browserify'.
+23 error Failed at the angular2-sandbox@1.0.0 build script 'npm run tsc && npm run browserify'.
 23 error Make sure you have the latest version of node.js and npm installed.
-23 error If you do, this is most likely a problem with the  package,
+23 error If you do, this is most likely a problem with the angular2-sandbox package,
 23 error not with npm itself.
 23 error Tell the author that this fails on your system:
 23 error     npm run tsc && npm run browserify
 23 error You can get information on how to open an issue for this project with:
-23 error     npm bugs
+23 error     npm bugs angular2-sandbox
 23 error Or if that isn't available, you can get their info via:
-23 error     npm owner ls
+23 error     npm owner ls angular2-sandbox
 23 error There is likely additional logging output above.
 24 verbose exit [ 1, true ]

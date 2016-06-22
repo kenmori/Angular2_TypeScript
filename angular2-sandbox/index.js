@@ -13,14 +13,31 @@ require("rxjs/Rx");
 require("zone.js/dist/zone");
 var platform_browser_dynamic_1 = require("@angular/platform-browser-dynamic");
 var core_1 = require("@angular/core");
+var MyComponent = (function () {
+    function MyComponent() {
+        this.name = 'Kenji';
+    }
+    MyComponent.prototype.sayMyName = function () {
+        console.log('My name is', this.name);
+    };
+    MyComponent = __decorate([
+        core_1.Component({
+            selector: "my-component",
+            template: "\n  <div>\n      <h2>click event</h2>\n      <p>My name is {{name}}.\n      <button onClick=\"sayMyName()\">SayMyName</button>\n      </p>\n  </div>\n  "
+        }), 
+        __metadata('design:paramtypes', [])
+    ], MyComponent);
+    return MyComponent;
+}());
+exports.MyComponent = MyComponent;
 var HelloWorldComponent = (function () {
     function HelloWorldComponent() {
     }
     HelloWorldComponent = __decorate([
         core_1.Component({
-            selector: "hello-world",
-            template: "\n  <h1>Hello World</h1>\n  ",
-            directives: []
+            selector: 'hello-world',
+            template: "\n  <h1>hello-world!</h1>\n  <MyComponent></MyComponent>\n  ",
+            direcitives: [MyComponent]
         }), 
         __metadata('design:paramtypes', [])
     ], HelloWorldComponent);
@@ -31,8 +48,8 @@ var MyAppComponent = (function () {
     }
     MyAppComponent = __decorate([
         core_1.Component({
-            selector: "my-app",
-            template: "\n    <hello-world></hello-world>\n  ",
+            selector: 'my-app',
+            template: "<hello-world></hello-world>",
             directives: [HelloWorldComponent]
         }), 
         __metadata('design:paramtypes', [])
