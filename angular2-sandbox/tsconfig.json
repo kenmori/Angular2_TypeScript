@@ -1,22 +1,22 @@
+
 {
+  "version": "1.5.0",
   "compilerOptions": {
     "target": "es5",
-    "noImplicitAny": true,
+    "module": "commonjs",
+    "declaration": false,
+    "noImplicitAny": false,
+    "removeComments": true,
+    "noLib": false,
     "experimentalDecorators": true,
-    "emitDecoratorMetadata": true,
-    "moduleResolution": "node"
+    "emitDecoratorMetadata": true
   },
   "filesGlob": [
     "./**/*.ts",
-    "!./**/*.d.ts",
-    "!./node_modules/**/*",
-    "./node_modules/typescript/lib/lib.es6.d.ts"
+    "!./node_modules/**/*.ts"
   ],
   "files": [
-    "./index.ts",
-    "./node_modules/typescript/lib/lib.es6.d.ts"
-  ],
-  "atom": {
-    "rewriteTsconfig": true
-  }
+    "./app.ts",
+    "./typings/angular2/angular2.d.ts"
+  ]
 }
